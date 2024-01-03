@@ -23,6 +23,7 @@ export const TxnButtonV2: React.FC<TxnButtonProps> = ({
       <button disabled={!write || isLoading} onClick={() => write?.()}>
         {isLoading ? "Loading..." : "Transact"}
       </button>
+      {/* user cant access any of the state from useContracthook */}
       {children}
     </>
   );
